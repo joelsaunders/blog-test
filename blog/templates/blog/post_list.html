@@ -8,12 +8,12 @@
 		</div>
 		
 		<div>
-			<p>Hi there!</p>
-			<p>It works!</p>
-		</div>
-		
-		<div>
-			<strong>What did the statue say to the person?</strong>
+			{% for post in posts %}
+				<div>
+					<h1><a href="">{{ post.title }}</a><h1>
+					<p>{{ post.text|linebreaks }}</p>
+				</div>
+			{% endfor %}	
 		</div>
 		
     </body>
