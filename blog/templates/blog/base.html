@@ -10,7 +10,9 @@
     <body>
 		<div class="page-header">
 			<h1><a href="/">Joel's Really Cool Page</a></h1>
-			<br>
+			{% if user.is_authenticated %}
+				<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+			{% endif %}
 			<br>
 		</div>
 
