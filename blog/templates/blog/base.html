@@ -6,10 +6,12 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 		<link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>		<link href='https://fonts.googleapis.com/css?family=PT+Sans:700' rel='stylesheet' type='text/css'>
     </head>
     <body>
 		<div class="page-header">
 			<div class="side-container">
+				<img src="{% static "images/Headshot.jpg" %}" class="headshot"/>
 				<div class="side-about">
 					<h1><a href="/">Joel Saunders</a></h1>
 					{% if user.is_authenticated %}

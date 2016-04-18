@@ -4,9 +4,10 @@ body {
 }
 
 .page-header {
-    background-color: #ff9400;
+    /*background-color: #ff9400;*/
+	background-color:#6AAB70;
     margin-top: 0;
-    padding: 2em, 1em, 2em, 1em;
+    padding: 2em 1em 2em 1em;
 	position: fixed;
 	height: 100%;
 	overflow: hidden;
@@ -59,7 +60,7 @@ h1, h2, h3, h4 {
 }
 
 .post h1 a, .post h1 a:visited {
-    color: #6AAB70;
+    color: #FF8735;
 }
 
 .edit {
@@ -69,18 +70,20 @@ h1, h2, h3, h4 {
 .side-container {
 	position: absolute;
 	right: 1rem;
-	top: 2rem;
+	bottom: 4rem;
 	left: 1rem;
 	max-width: 38rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1em;
+    padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
+	margin-bottom:4rem;
 }
 
 .side-about {
 	text-align: left;
 	margin-bottom: 2rem;
+	font-family: 'PT Sans';
 	
 }
 
@@ -89,7 +92,7 @@ h1, h2, h3, h4 {
 	font-size: 18pt;
 	text-decoration: none;
 	color: #ffffff;
-	font-family: Helvetica;
+	font-family: 'PT Sans', Helvetica;
 }
 
 .ui-widget {
@@ -100,4 +103,16 @@ h1, h2, h3, h4 {
 	margin-top: 2em;
 	margin-bottom: 2em;
 	font-size: 16pt;
+}
+
+.headshot {
+	
+    margin-bottom: 2em;
+	border-radius: 150%;
+	width: 13em;
+	margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+	display: block;
+    
 }

@@ -55,8 +55,8 @@ def laser(request):
     if request.method == 'POST':
         form = MyForm(request.POST)
         if form.is_valid():
-            dia = int(form.cleaned_data['dia'])
-            power = int(form.cleaned_data['power'])
+            dia = float(form.cleaned_data['dia'])
+            power = float(form.cleaned_data['power'])
 
             ans = p_density(power, dia)
 
