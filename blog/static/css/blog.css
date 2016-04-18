@@ -12,6 +12,8 @@ body {
 	overflow: hidden;
 	display: inline-block;
 	width: 18em;
+	/*sticks to left hand side in firefox now*/
+	left: 0;
 	
 }
 
@@ -88,4 +90,14 @@ h1, h2, h3, h4 {
 	text-decoration: none;
 	color: #ffffff;
 	font-family: Helvetica;
+}
+
+.ui-widget {
+	width: 100%;
+	display: inline;
+}
+.page-desc {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	font-size: 16pt;
 }

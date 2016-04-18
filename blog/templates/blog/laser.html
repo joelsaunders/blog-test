@@ -1,6 +1,37 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-	
-
+	<div>
+		<div class="title-block">
+			<h1>Power Density Calculator</h1>
+			<br>
+			<div class="page-desc">
+				<p>A tool to calculate the power density of a cw Laser in W/m^2 </p>
+			</div>
+		</div>
+		<form action="/laser/" method="post">{% csrf_token %}
+			<p>Enter beam diameter in millimetres:</p>
+			<p>
+				<div class="ui-widget">
+					<label for="id_dia">Diameter:
+						<input id="id_dia" type="number" name="dia" step="0.01" />
+						mm
+					</label>
+				</div>
+			</p>
+			
+			<p>Enter Power in Watts:</p>
+			<p>
+				<div class="ui-widget">
+					<label for="id_power">power:
+						<input id="id_power" type="number" name="power" step="0.01" /> W
+					</label>
+				</div>
+			</p>
+			
+			<input type="submit" value="Submit"/>
+			
+		</form>
+		
+	</div>
 {% endblock %}

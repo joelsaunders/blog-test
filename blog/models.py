@@ -18,3 +18,13 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Laser(models.Model):
+    dia = models.DecimalField(max_digits=8, decimal_places=5)
+    power = models.DecimalField(max_digits=8, decimal_places=5)
+
+    def get_dia(self):
+        return self.dia
+
+    def get_power(self):
+        return self.power

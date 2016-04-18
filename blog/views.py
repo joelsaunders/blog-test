@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Post #import the model created previously
+from .models import Post, Laser #import the model created previously
 from django.utils import timezone #import timezone for sorting
-from .forms import PostForm
+from .forms import PostForm, MyForm
 
 def post_list(request):
     # order posts and exclude unpublished posts
@@ -42,5 +42,26 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render((request), 'blog/post_edit.html', {'form': form})
 
+def spot_size(dia):
+    areamm = 3.142*((dia/2)**2)
+    aream = areamm / (1000**2)
+    return aream
+
+def p_density(power, dia):
+    power_density = power / spot_size(dia)
+    return power_density
+
 def laser(request):
-    return render(request, 'blog/laser.html', {})
+    if request.method == 'POST':
+        form = MyForm(request.POST)
+        if form.is_valid():
+            dia = int(form.cleaned_data['dia'])
+            power = int(form.cleaned_data['power'])
+
+            ans = p_density(power, dia)
+
+            return render(request, 'blog/laser_out.html', {'ans': ans})
+    else:
+        form = MyForm()
+
+    return render(request, 'blog/laser.html', {'form': form})
