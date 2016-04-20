@@ -22,9 +22,13 @@ class Post(models.Model):
 class Laser(models.Model):
     dia = models.DecimalField(max_digits=8, decimal_places=5)
     power = models.DecimalField(max_digits=8, decimal_places=5)
+    lam = models.DecimalField(max_digits=8, decimal_places=5)
 
     def get_dia(self):
         return self.dia
 
     def get_power(self):
         return self.power
+
+    def get_lam(self):
+        return self.lam

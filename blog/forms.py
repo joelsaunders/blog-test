@@ -13,4 +13,4 @@ class MyForm(forms.ModelForm):
 	#power = forms.DecimalField(max_digits=8, decimal_places=5)
     class Meta:
         model = Laser
-        fields = ('dia','power')
+        fields = ('dia','power','lam')
