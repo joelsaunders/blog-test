@@ -3,10 +3,11 @@
 {% block content %}
 	<div>
 		<div class="title-block">
-			<h1>Power Density Calculator</h1>
+			<h1>Laser Safety Analysis</h1>
 			<br>
 			<div class="page-desc">
-				<p>A tool to calculate the power density of a cw Laser in W/m^2 </p>
+				<p>A simple tool to calculate the power density and protection level of a cw laser based on calculation designed in European standard EN 207.</p>
+				<p>This protection level is used to specify the correct type and level of protective eyewear you must use </p>
 			</div>
 		</div>
 		<form action="/laser/" method="post">{% csrf_token %}
@@ -40,6 +41,7 @@
 			
 			<input type="submit" value="Submit"/>
 			
+			<p class="footer"><small>This should only be used out of interest and the results should not be used to specify protective eyewear</small></p>
 		</form>
 		
 	</div>

@@ -29,6 +29,7 @@ body {
 	margin-left: 320px;
 	overflow: hidden;
 	display: inline-block;
+	max-width: 65%;
 	
 }
 
@@ -70,8 +71,7 @@ h1, h2, h3, h4 {
 .side-container {
 	position: absolute;
 	right: 1rem;
-	bottom: 15%;
-	vertical-align: middle;
+	bottom: 25%;
 	left: 1rem;
 	max-width: 38rem;
     padding-left: 1em;
@@ -118,4 +118,8 @@ h1, h2, h3, h4 {
     text-align: center;
 	display: block;
     
+}
+
+.footer {
+	margin-top: 3em;
 }
