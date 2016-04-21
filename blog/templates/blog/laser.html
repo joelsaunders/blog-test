@@ -24,7 +24,7 @@
 			<p>
 				<div class="ui-widget">
 					<label for="id_power">power:
-						<input id="id_power" type="number" name="power" step="0.01" /> W
+						<input id="id_power" type="number" name="power" step="0.01" min="1" max="10000" /> W
 					</label>
 				</div>
 			</p>
@@ -33,7 +33,7 @@
 			<p>
 				<div class="ui-widget">
 					<label for="id_lam">Wavelength:
-						<input id="id_lam" type="number" name="lam" step="1" /> nm
+						<input id="id_lam" type="number" name="lam" step="0.001" min="1" max="10000" maxlength="5" /> nm
 					</label>
 				</div>
 			</p>

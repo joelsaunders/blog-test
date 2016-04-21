@@ -9,8 +9,9 @@ class PostForm(forms.ModelForm):
 
 class MyForm(forms.ModelForm):
 
-    #dia = forms.DecimalField(max_digits=8, decimal_places=5)
-	#power = forms.DecimalField(max_digits=8, decimal_places=5)
+    dia = forms.FloatField(label='dia')
+    power = forms.FloatField(label='power')
+    lam = forms.FloatField(label='lam')
     class Meta:
         model = Laser
         fields = ('dia','power','lam')
